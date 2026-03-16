@@ -1,0 +1,86 @@
+# NexusCRM — Feature Documentation
+
+## Authentication
+- Full-screen login page with name, email, password
+- Session stored in localStorage (persists across reloads)
+- Logged-in user auto-populates all owner/approver dropdowns
+- Sign Out from topbar profile panel
+
+## Dashboard
+- Live KPI cards — Contacts This Month, Deals Won, Deals Lost, Tasks Closed
+- Trend % vs previous month on every KPI card
+- Open Deals by Stage chart — real data from Deals module
+- Revenue Won by Month chart — sums actual Closed Won deal amounts
+- Quick Tabs for instant navigation to any module
+- Welcome banner with active deal count and open task count
+
+## Modules
+
+### Contacts
+Fields: First Name, Last Name, Email, Mobile, Phone, Job Title, Status, Owner  
+Optional (Add Fields): Aadhar Number, Upload Photo, PAN Number, Occupation, Company  
+Section extras: Date of Birth, Gender, Address, LinkedIn, Lifecycle Stage, Lead Source, Tags
+
+### Companies
+Fields: Name, Status, Account Owner, Description, Account Tier, Primary Domain  
+Optional: Phone, Email, GSTIN, PAN Number, Address, Upload Logo, Employee Count  
+Section extras: Founded Year, Industry, Annual Revenue
+
+### Deals
+Fields: Name, Stage, Deal Owner, Amount, Closing Date, Priority, Description  
+Optional: Linked Contact, Linked Company, Deal Source, Win Probability, Attach Document  
+Section extras: Notes, Tags
+
+### Tasks
+Fields: Task Owner, Title, Description, Priority, Activity Type, Due Date  
+Optional: Linked Contact, Linked Deal, Attachment, Location  
+Section extras: Tags, Repeat, End Time, All Day
+
+### Projects
+Fields: Status, Approver, Project Name, Location, Type, Total Units  
+Optional: RERA Number, Land Area, Launch Date, Completion Date, Amenities, Brochure  
+Section extras: Description, Total Floors
+
+### Inventory
+Fields: Project, Tower, Block, Unit No, Status, Size, Price, Unit Approver  
+Optional: Floor Number, Facing, BHK Type, Carpet Area, Parking Slots  
+Section extras: Notes, Floor Plan
+
+### Negotiations
+Fields: Project, Unit, Negotiated By, Approver, Quoted Price, Negotiated Price, Discount, Status, Message, Approval Details
+
+### Bookings
+Fields: Project, Unit, Booking By, Approver, Status, Booking Date, Amount Paid, Total Amount, Payment Plan
+
+## Add Fields System
+Every Create modal has:
+- **Top-right "Add Fields" button** — module-specific extra fields
+- **Per-section "+ Add field" button** — section-specific extras
+- Added fields appear inline with a ✕ remove button
+- Fields are preserved while the modal is open
+
+## Advanced Filters
+Available on all 8 modules with per-module field sets:
+- Text: contains, does not contain, is, is not, starts with, ends with, is empty
+- Status: is, is not, is any of, is none of (module-specific options)
+- Date: is, before, after, between, today, this week, this month, last month
+- Number: equals, not equals, greater than, less than, between
+- Owner: is, is not (from registered users list)
+- Match ALL or ANY logic toggle for multiple filters
+- Active filter count badge on the Filters button
+
+## Charts
+- Dashboard bar chart — live deal stage counts from real data
+- Dashboard line chart — real monthly revenue from Closed Won deals
+- Fullscreen modal — 7 chart types: Column, Bar, Line, Area, Pie, Donut, Table
+- Revenue trend % vs last month calculated from real data
+
+## Other Features
+- Grid and List view toggle on every module
+- Bookmarks — save any record for quick sidebar access
+- Import/Export modal with file picker per module
+- Org Selector — 15 Indian cities in the topbar
+- Collapsible sidebar with icon-only mode
+- Status selector (Available, Break, Lunch, Meeting, Training, Unavailable)
+- Notification panel
+- Settings page (General, Profile, Notifications, Security, Integrations, Billing)
